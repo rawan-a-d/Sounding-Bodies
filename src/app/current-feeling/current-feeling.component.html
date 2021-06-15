@@ -1,0 +1,11 @@
+<div *ngFor="let emotionCategory of emotionCategories">
+    <div>
+        <h1>Category: {{emotionCategory.category.name}}</h1>
+        <img [src]="emotionCategory.category.image">
+        <p>Emotions:</p>
+        <ul *ngFor="let emotion of emotionCategory.emotions">
+            <li>{{emotion.name}}</li>
+            <img [src]="emotion.image">
+        </ul>
+    </div>
+</div>
