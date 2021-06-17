@@ -7,7 +7,7 @@
 </drag-scroll> -->
 
 <div class="content">
-    <div class="border" [matBadge]="index">
+    <div class="border">
       <drag-scroll class="emotions"
         (indexChanged)="onIndexChanged($event)"
         #nav>
@@ -20,4 +20,6 @@
       </drag-scroll>
     </div>
   </div>
+
+  <app-current-feeling [index]="index"></app-current-feeling>
   

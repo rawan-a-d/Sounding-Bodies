@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-dragscroll',
@@ -15,7 +16,10 @@ export class DragscrollComponent implements OnInit {
     'neutral.png',
   ];
 
-  constructor() { }
+  constructor(
+    // private router: Router,
+		// private route: ActivatedRoute
+  ) { }
 
   index = 0;
 

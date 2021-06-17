@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Emotion } from '../models/Emotion';
 import { EmotionCategory } from '../models/EmotionCategory';
 
@@ -8,6 +8,9 @@ import { EmotionCategory } from '../models/EmotionCategory';
   styleUrls: ['./current-feeling.component.css']
 })
 export class CurrentFeelingComponent implements OnInit {
+
+  @Input() index = 0;
+
   // Emotions list grouped by category
   public emotionCategories: EmotionCategory[] = [
     new EmotionCategory(new Emotion("Angry", "#FAA2A2", "assets/categories/angry.png"), [
