@@ -15,9 +15,24 @@ export class ScrollEmotionsComponent implements OnInit {
     'neutral.png',
   ];
 
-  constructor() { }
+  selectedItem = "";
+
+  selectedImg: String = "";
+
+  selected = "angray";
+  // selectedAfraid = "";
+
+  constructor() { 
+    // this.selected();
+  }
 
   ngOnInit(): void {
   }
+
+  // selected(){
+  //   if(this.selectedItem == "angry"){
+  //     console.log("You selected" + this.selectedItem)
+  //   }
+  // }
 
 }

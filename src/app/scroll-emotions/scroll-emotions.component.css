@@ -10,7 +10,7 @@ body{
     height: 200px;overflow:auto;
 }
 
-.item{
+/* .item{
     width: 90%;
     height: 60px;
     margin:60px;
@@ -18,29 +18,56 @@ body{
     justify-content:center;
     align-items:center;
     color:#FFFFFF;
+} */
+
+img.angryImg{
+    /* border-radius: 80%; */
+    width: 100px;
+    border-radius: 50%;
+    background: rgb(238, 98, 98);
+    margin:60px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#FFFFFF;
 }
 
-.angryImg{
-    border-radius: 80%;
-    background: red;
-}
-
-.afraidImg{
+img.afraidImg{
     border-radius: 80%;
     background: lightblue;
+    margin:60px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#FFFFFF;
 }
 
-.sadImg{
+img.sadImg{
     border-radius: 50%;
     background: #B8DDE0;
+    margin:60px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#FFFFFF;
 }
 
-.mehImg{
+img.mehImg{
     border-radius: 80%;
     background: lightgray;
+    margin:60px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#FFFFFF;
 }
 
-.happyImg{
+img.happyImg{
     border-radius: 80%;
     background: orange;
+    margin:60px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#FFFFFF;
 }
