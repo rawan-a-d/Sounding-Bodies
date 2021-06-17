@@ -1,13 +1,7 @@
-<!-- <drag-scroll>
-    <img drag-scroll-item src="../assets/images/angry.png" />
-    <img drag-scroll-item src="../assets/images/afraid.png" />
-    <img drag-scroll-item src="../assets/images/sad.png" />
-    <img drag-scroll-item src="../assets/images/neutral.png" />
-    <img drag-scroll-item src="../assets/images/happy.png" />
-</drag-scroll> -->
-
 <div class="content">
-    <div class="border">
+
+      <!-- Show the main emotions, detect the index of the image-->
+
       <drag-scroll class="emotions"
         (indexChanged)="onIndexChanged($event)"
         #nav>
@@ -18,8 +12,9 @@
         <img drag-scroll-item class="mehImg" src="../assets/images/neutral.png" />
         <img drag-scroll-item class="happyImg" src="../assets/images/happy.png" />
       </drag-scroll>
-    </div>
   </div>
+
+  <!-- Go to child component through the index -->
 
   <app-current-feeling [index]="index"></app-current-feeling>
   

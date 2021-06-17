@@ -8,24 +8,22 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class DragscrollComponent implements OnInit {
 
-  imagelist = [
-    'angry.png', 
-    'happy.png',
-    'afraid.png',
-    'sad.png' ,
-    'neutral.png',
-  ];
+  // imagelist = [
+  //   'angry.png', 
+  //   'happy.png',
+  //   'afraid.png',
+  //   'sad.png' ,
+  //   'neutral.png',
+  // ];
 
-  constructor(
-    // private router: Router,
-		// private route: ActivatedRoute
-  ) { }
+  constructor() { }
 
   index = 0;
 
   ngOnInit(): void {
   }
 
+  // track the indexes of the images
   onIndexChanged(idx: number) { 
     this.index = idx;
     console.log('current index: ' + idx);
@@ -63,27 +61,5 @@ export class DragscrollComponent implements OnInit {
       } 
     }
   }
-
-  // test(idx: number){
-
-  //   this.index = idx;
-
-  //   switch(idx) { 
-  //     case 0: { 
-  //        //statements; 
-  //        console.log("0 Pos: " + idx)
-  //        break; 
-  //     } 
-  //     case 1: { 
-  //        //statements; 
-  //        console.log("1 Pos: " + idx)
-  //        break; 
-  //     } 
-  //     default: { 
-  //        //statements; 
-  //        break; 
-  //     } 
-  //  } 
-  // }
 
 }
