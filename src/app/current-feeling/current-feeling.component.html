@@ -1,11 +1,26 @@
-<div *ngFor="let emotionCategory of emotionCategories">
+<!-- <app-categories></app-categories> -->
+<div *ngFor="let emotionCategory of emotionCategories;">
     <div>
         <h1>Category: {{emotionCategory.category.name}}</h1>
         <img [src]="emotionCategory.category.image">
         <p>Emotions:</p>
-        <ul *ngFor="let emotion of emotionCategory.emotions">
-            <li>{{emotion.name}}</li>
-            <img [src]="emotion.image">
+        <!-- List of emotions -->
+        <ul class="emotions-container">
+            <!-- Emotion -->
+            <li class="emotion-container"
+                *ngFor="let emotion of emotionCategory.emotions; let i = index; let lastcall=last"
+                [ngClass]="getEmotionClass(i)"
+                [ngStyle]="{'background-color':  hexToRGB(emotion.color, '0.34') }">
+                <!-- Image -->
+                <div class="img-container">
+                    <img [src]="emotion.image">
+                </div>
+                <!-- Emotion name -->
+                <div class="emotion-name-container"
+                    [ngStyle]="{'background-color':  hexToRGB(emotion.color, '1') }">
+                    <h3>{{emotion.name}}</h3>
+                </div>
+            </li>
         </ul>
     </div>
 </div>

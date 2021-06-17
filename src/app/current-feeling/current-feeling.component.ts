@@ -36,10 +36,54 @@ export class CurrentFeelingComponent implements OnInit {
     ]),
   ]
 
+  // Determine the direction of the emotion container (border radius)
+  isDirectionRight = true
+
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+
+  // Apply class to each emotion based on index
+  getEmotionClass(index: number) {
+    var className = ''
+
+    // when loop starts
+    if(index == 0) {
+      this.isDirectionRight = true
+      className += 'first '
+    }
+
+    // change direction if odd number
+    this.changeDirection(index)
+
+    // apply correct class based on direction
+    this.isDirectionRight ? className += 'radius-right' : className += 'radius-left'
+
+    return className
+  }
+
+  changeDirection(index: number) {
+    // if odd number -> change direction
+    if(index % 2 != 0) {
+      console.log("index " + index)
+      this.isDirectionRight = !this.isDirectionRight
+    } 
+  }
+
+  // change hex to rgba
+  hexToRGB(hex: string, alpha: string) {
+    const r = parseInt(hex.slice(1, 3), 16);
+    const g = parseInt(hex.slice(3, 5), 16);
+    const b = parseInt(hex.slice(5, 7), 16);
+  
+    if (alpha) {
+      return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+    } else {
+      return `rgb(${r}, ${g}, ${b})`;
+    }
   }
 
 }
