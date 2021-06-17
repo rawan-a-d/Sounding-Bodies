@@ -3,12 +3,12 @@
     background-color: #FFFFFF;
 }
 
-.emotions img {
+/* .emotions img {
     height: 50px;
     width: 50px;
     border-radius: 50%;
     background: rgb(238, 140, 140);
-}
+} */
 
 @media (max-width: 1000px) {
     .emotions {
@@ -43,5 +43,65 @@
     .content {
         margin: 8px 12px;
     }
+}
+
+img.angryImg{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: rgb(238, 98, 98);
+    margin:30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#FFFFFF;
+}
+
+img.afraidImg{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: lightblue;
+    margin:30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#FFFFFF;
+}
+
+img.sadImg{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: #B8DDE0;
+    margin:30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#FFFFFF;
+}
+
+img.mehImg{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: lightgray;
+    margin:30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#FFFFFF;
+}
+
+img.happyImg{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: orange;
+    margin:30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#FFFFFF;
 }
   

@@ -11,7 +11,12 @@
       <drag-scroll class="emotions"
         (indexChanged)="onIndexChanged($event)"
         #nav>
-        <img drag-scroll-item *ngFor="let image of imagelist" [src]="'../assets/images/' + image"/>
+        <!-- <img drag-scroll-item *ngFor="let image of imagelist" [src]="'../assets/images/' + image"/> -->
+        <img drag-scroll-item class="angryImg" src="../assets/images/angry.png" />
+        <img drag-scroll-item class="afraidImg" src="../assets/images/afraid.png" />
+        <img drag-scroll-item class="sadImg" src="../assets/images/sad.png" />
+        <img drag-scroll-item class="mehImg" src="../assets/images/neutral.png" />
+        <img drag-scroll-item class="happyImg" src="../assets/images/happy.png" />
       </drag-scroll>
     </div>
   </div>
