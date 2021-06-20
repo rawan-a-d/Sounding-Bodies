@@ -22,6 +22,7 @@
     "@hyperblob/ngx-wheel-selector": "^1.1.6",
     "@igniteui/material-icons-extended": "^2.7.0",
     "@juggle/resize-observer": "^3.3.0",
+    "@vime/angular": "^5.0.31",
     "classlist.js": "1.1.20150312",
     "hammer": "0.0.5",
     "hammerjs": "^2.0.8",

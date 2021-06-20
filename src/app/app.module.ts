@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-
+import { VimeModule } from '@vime/angular';
 import { AppComponent } from './app.component';
-import { RouterModule } from '@angular/router';
+import { appRoutingModule } from './app.routing';
 import { DragScrollModule } from 'ngx-drag-scroll';
 import { DragscrollComponent } from './dragscroll/dragscroll.component';
 import { CurrentFeelingComponent } from './current-feeling/current-feeling.component';
@@ -35,16 +34,8 @@ import { AppSettingsComponent } from "./app-settings/app-settings.component";
     BrowserModule,
     BrowserAnimationsModule,
     DragScrollModule,
-    RouterModule.forRoot([
-      {path: 'app', component: AppComponent},
-      {path: 'current-feeling', component: CurrentFeelingComponent},
-      {path: 'video-session', component: CurrentFeelingComponent},
-      {path: 'login', component: LoginComponent},
-      {path: 'signup', component: SignupComponent},
-      {path: 'want-to-feel', component: WantToFeelComponent},
-      {path: 'app-settings', component: AppSettingsComponent},
-
-    ])
+    appRoutingModule,
+    VimeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
