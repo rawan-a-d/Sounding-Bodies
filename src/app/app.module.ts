@@ -24,7 +24,12 @@ import { AppSettingsComponent } from "./app-settings/app-settings.component";
     CurrentFeelingComponent,
     CategoriesComponent,
     HeaderComponent,
-    VideoSessionComponent
+    VideoSessionComponent,
+    LoginComponent,
+    SignupComponent,
+    WantToFeelComponent,
+    ProfileComponent,
+    AppSettingsComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +38,12 @@ import { AppSettingsComponent } from "./app-settings/app-settings.component";
     RouterModule.forRoot([
       {path: 'app', component: AppComponent},
       {path: 'current-feeling', component: CurrentFeelingComponent},
-      {path: 'video-session', component: CurrentFeelingComponent}
+      {path: 'video-session', component: CurrentFeelingComponent},
+      {path: 'login', component: LoginComponent},
+      {path: 'signup', component: SignupComponent},
+      {path: 'want-to-feel', component: WantToFeelComponent},
+      {path: 'app-settings', component: AppSettingsComponent},
+
     ])
   ],
   providers: [],
