@@ -1,0 +1,24 @@
+<div>
+    <div id="header1" class="half-circle"></div>
+    <div id="header2" class="half-circle2"></div>
+</div>
+<br/><br/>
+<!-- List of emotions -->
+<ul class="emotions-container">
+    <!-- Emotion -->
+    <li class="emotion-container"
+        *ngFor="let emotion of emotions; let i = index; let lastcall=last"
+        [ngClass]="getEmotionClass(i)"
+        [ngStyle]="{'background-color':  hexToRGB(emotion.color, '0.34') }"
+        (click)="setColor(emotion.color)">
+        <!-- Image -->
+        <div class="img-container">
+            <img [src]="emotion.image">
+        </div>
+        <!-- Emotion name -->
+        <div class="emotion-name-container"
+            [ngStyle]="{'background-color':  hexToRGB(emotion.color, '1') }">
+            <h3>{{emotion.name}}</h3>
+        </div>
+    </li>
+</ul>

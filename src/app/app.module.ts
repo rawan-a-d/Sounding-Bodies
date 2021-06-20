@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { CurrentFeelingComponent } from './current-feeling/current-feeling.component';
 import { CategoriesComponent } from './current-feeling/categories/categories.component';
 
+import { FeelingWishComponent } from './feeling-wish/feeling-wish.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CurrentFeelingComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    FeelingWishComponent
   ],
   imports: [
     BrowserModule,

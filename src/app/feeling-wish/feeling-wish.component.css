@@ -1,0 +1,79 @@
+/* ul, container around emotions */
+ul.emotions-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  justify-content: space-evenly;
+}
+
+/* Individual emotion */
+li.emotion-container {
+  text-align: center;
+  overflow: hidden;
+  flex-direction: column;
+  width: 45%;
+  height: 275px;
+  margin-top: 6%;
+}
+
+/* Emotion with border radius directed to the left */
+.emotion-container.radius-left {
+  border-radius: 100px 10px 60px 10px;
+}
+
+/* Emotion with border radius directed to the right */
+.emotion-container.radius-right {
+  border-radius: 10px 100px 10px 60px;
+}
+
+/* .emotion-container.first {
+    margin-top: 20px;
+} */
+
+/* Emotion image */
+/* Container */
+.img-container {
+  height: 80%;
+}
+
+/* Image */
+.img-container > img {
+  /* width: 80%; */
+  height: 80%;
+  padding: 10%;
+}
+
+/* text */
+li > .emotion-name-container > h3 {
+  height: 54px;
+  color: white;
+  margin: 0;
+  line-height: 54px;
+}
+
+/* headers */
+.half-circle {
+  width: 70vmin;
+  height: 10vmin;
+  background-color: #e06386;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 250px;
+  border-top: 0;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin-bottom: 5%;
+}
+
+.half-circle2 {
+  width: 54vmin;
+  height: 7vmin;
+  background-color: #e06386;
+  border-bottom-left-radius: 250px;
+  border-top: 0;
+  position: absolute;
+  top: 0px;
+  left: 350px;
+  margin-bottom: 5%;
+}
