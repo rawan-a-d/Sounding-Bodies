@@ -1,0 +1,23 @@
+<!-- Emotions wheel -->
+<div class="wheel-container">
+	<div [class]="menuClass" id="menu">
+		<div class="item item1">
+			<img class="angry" src="../../../assets/categories/angry.png" (click)="changeEmotion('angry')" />
+		</div>
+		<div class="item item2">
+			<img class="afraid" src="../../../assets/categories/afraid.png" (click)="changeEmotion('afraid')"/>
+		</div>
+		<div class="item item3">
+			<img class="sad" src="../../../assets/categories/sad.png" (click)="changeEmotion('sad')"/>
+		</div>
+		<div class="item item4">
+			<img class="neutral" src="../../../assets/categories/neutral.png" (click)="changeEmotion('neutral')"/>
+		</div>
+		<div class="item item5">
+			<img class="happy" src="../../../assets/categories/happy.png" (click)="changeEmotion('happy')"/>
+		</div>
+	</div>
+	
+	<!-- Text inside circle -->
+	<div class="circle-txt">I'M FEELING</div>
+</div>

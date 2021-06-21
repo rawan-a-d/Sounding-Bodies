@@ -1,34 +1,21 @@
-.emotions {
-    height: 260px;
-    background-color: #FFFFFF;
-}
 
-/* .emotions img {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background: rgb(238, 140, 140);
-} */
+/* Emotions */
+.emotions {
+    height: 150px;
+}
 
 @media (max-width: 1000px) {
     .emotions {
-        height: 200px;
+        height: 150px;
     }
 
     .emotions img {
-        width: 200px;
-        height: 200px;
+        width: 100px;
+        height: 100px;
     }
 }
-  
-.border {
-    padding: 10px 10px 10px 10px;
-    box-sizing: border-box;
-    border: 1px solid;
-    border-color: #CFCFCF;
-    margin-bottom: 20px;
-}
 
+/* Content */
 .content {
     margin: 50px 70px;
 }
@@ -45,63 +32,33 @@
     }
 }
 
-img.angryImg{
-    height: 50px;
-    width: 50px;
+/* images general */
+img{
     border-radius: 50%;
-    background: rgb(238, 98, 98);
     margin:30px;
     display:flex;
     justify-content:center;
     align-items:center;
-    color:#FFFFFF;
+}
+
+/* assign different colors to each img */
+img.angryImg{
+    background: rgb(238, 98, 98);
 }
 
 img.afraidImg{
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
     background: lightblue;
-    margin:30px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:#FFFFFF;
 }
 
 img.sadImg{
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
     background: #B8DDE0;
-    margin:30px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:#FFFFFF;
 }
 
 img.mehImg{
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
     background: lightgray;
-    margin:30px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:#FFFFFF;
 }
 
 img.happyImg{
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
     background: orange;
-    margin:30px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:#FFFFFF;
 }
   
