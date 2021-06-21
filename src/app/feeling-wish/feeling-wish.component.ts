@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Emotion } from "../models/Emotion";
 import { EmotionCategory } from '../models/EmotionCategory';
 
+
+declare var SVGMorpheus: any;
+
 @Component({
   selector: 'app-feeling-wish',
   templateUrl: './feeling-wish.component.html',
@@ -70,13 +73,14 @@ export class FeelingWishComponent implements OnInit {
   }
 
   setColor(color: string){
-    var header1 = document.getElementById("header1");
-    var header2 = document.getElementById("header2");
+    var svg = document.getElementById("svg-path1");
 
-    if(header1 != null && header2 != null){
-      header1.style.backgroundColor = color;
-      header2.style.backgroundColor = color;
+    var morphModule = new SVGMorpheus(svg);
+
+    if(svg != null){
+      svg.style.fill = color;
+
+
     }
-    
   }
 }

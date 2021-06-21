@@ -53,27 +53,22 @@ li > .emotion-name-container > h3 {
 }
 
 /* headers */
-.half-circle {
-  width: 70vmin;
+.header {
+  /* width: 70vmin;
   height: 10vmin;
   background-color: #e06386;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 250px;
-  border-top: 0;
+  border-top: 0; */
   position: absolute;
   top: 0px;
   left: 0px;
-  margin-bottom: 5%;
 }
 
-.half-circle2 {
-  width: 54vmin;
-  height: 7vmin;
-  background-color: #e06386;
-  border-bottom-left-radius: 250px;
-  border-top: 0;
-  position: absolute;
-  top: 0px;
-  left: 350px;
-  margin-bottom: 5%;
+#svg-path-2 {
+  display: none;
+}
+
+.svg-wrapper {
+  margin-bottom: 20%;
 }
