@@ -8,7 +8,7 @@ import { DragScrollModule } from 'ngx-drag-scroll';
 import { DragscrollComponent } from './dragscroll/dragscroll.component';
 import { CurrentFeelingComponent } from './current-feeling/current-feeling.component';
 import { CategoriesComponent } from './current-feeling/categories/categories.component';
-import { HeaderComponent } from './header/header.component';
+import { LogInComponent } from './log-in/log-in.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,7 @@ import { HeaderComponent } from './header/header.component';
     DragscrollComponent,
     CurrentFeelingComponent,
     CategoriesComponent,
-    HeaderComponent
+    LogInComponent
   ],
   imports: [
     BrowserModule,
