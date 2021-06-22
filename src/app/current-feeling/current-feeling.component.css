@@ -64,15 +64,23 @@ li.emotion-container > .emotion-name-container > h3 {
 	font-size: 1.7em;
 	color: white;
 	letter-spacing: 7px;
+	margin-top: 6%;
 }
 
 
 								/* Wave */
-svg#wave {
+svg.wave {
 	position: absolute;
 	left: 0;
-	top: 0;
 	z-index: -1;
+}
+
+.light-wave {
+	top: 5%;
+}
+
+.dark-wave {
+	top: 0;
 }
 
 
