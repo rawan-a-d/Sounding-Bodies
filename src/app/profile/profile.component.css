@@ -4,8 +4,10 @@
     }
     
     img.avatar {
+        margin-top: 8%;
         width: 100%;
         border-radius: 10%;
+        position: relative;
     }
     
     .container {
@@ -82,6 +84,21 @@
         transition: 0.3s;
         font-size: 17px;
         color: white;
+    }
+
+    /* Wave */
+    svg.wave {
+        position: absolute;
+        left: 0;
+        /* z-index: -1; */
+    }
+
+    .light-wave {
+        top: 3%;
+    }
+
+    .dark-wave {
+        top: 0;
     }
         
       
