@@ -10,7 +10,7 @@ export class CategoriesComponent implements OnInit {
   menuClass = 'menu'
 
   constructor() {
-   }
+  }
 
   ngOnInit(): void {
   }
@@ -20,15 +20,3 @@ export class CategoriesComponent implements OnInit {
   }
 
 }
-
-// $(document).ready(function() {
-//     $(".angry, .afraid, .sad, .neutral, .happy").on("click", function() {      
-//         $(".menu, h2")
-//             // Remove all classes
-//             .removeClass()
-//             // Put back .primary-color class + the clicked elements class with the added prefix "pm_".
-//             .addClass('menu pm_' + $(this).attr('class') );  
-//         console.log($(this).attr('class') )
-//     });
-//     return(false);
-// });
