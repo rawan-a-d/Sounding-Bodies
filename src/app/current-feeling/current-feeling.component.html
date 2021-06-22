@@ -1,7 +1,8 @@
 
 <!-- Categories -->
 <!-- small Screen -->
-<app-categories *ngIf="scrWidth < 768; else largeScreen"></app-categories>
+<app-categories *ngIf="scrWidth < 768; else largeScreen" 
+				(newCategorySelectionEvent)="changeCategorySelection($event)"></app-categories>
 <!-- large screen -->
 <ng-template #largeScreen>
 	<!-- Wave -->
