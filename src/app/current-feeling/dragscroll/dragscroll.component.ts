@@ -6,6 +6,7 @@ import { Emotion } from '../../models/Emotion';
 import { EmotionCategory } from '../../models/EmotionCategory';
 
 @Component({
+	// https://stackoverflow.com/questions/45467881/expressionchangedafterithasbeencheckederror-expression-has-changed-after-it-was
 	changeDetection: ChangeDetectionStrategy.OnPush,
 	selector: 'app-dragscroll',
 	templateUrl: './dragscroll.component.html', 

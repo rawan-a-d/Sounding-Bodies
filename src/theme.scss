@@ -1,0 +1,78 @@
+@import "~@angular/material/_theming";
+
+@include mat-core();
+
+$pink: (
+    50 : #fbecf0,
+    100 : #f6d0db,
+    200 : #f0b1c3,
+    300 : #e992aa,
+    400 : #e57a98,
+    500 : #e06386,
+    600 : #dc5b7e,
+    700 : #d85173,
+    800 : #d34769,
+    900 : #cb3556,
+    A100 : #ffffff,
+    A200 : #ffe0e7,
+    A400 : #ffadbe,
+    A700 : #ff94aa,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+$blue: (
+    50 : #e1e6ef,
+    100 : #b4c1d7,
+    200 : #8298bd,
+    300 : #506fa3,
+    400 : #2b508f,
+    500 : #05317b,
+    600 : #042c73,
+    700 : #042568,
+    800 : #031f5e,
+    900 : #01134b,
+    A100 : #7f92ff,
+    A200 : #4c67ff,
+    A400 : #193cff,
+    A700 : #0027fe,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+$red: $mat-red;
+
+
+$app-primary: mat-palette($pink, 500);
+$app-accent: mat-palette($blue, 500);
+$app-warn: mat-palette($red);
+
+$app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+
+@include angular-material-theme($app-theme);
