@@ -29,3 +29,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Resources
 https://www.codegrepper.com/code-examples/typescript/angular+get+screen+width+in+component
+https://stackoverflow.com/questions/21646738/convert-hex-to-rgba
+https://www.npmjs.com/package/ngx-drag-scroll

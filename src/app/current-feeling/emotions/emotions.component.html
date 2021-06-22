@@ -4,7 +4,9 @@
 	<li class="emotion-container"
 		*ngFor="let emotion of emotionCategories[index].emotions; let i = index; let lastcall=last"
 		[ngClass]="getEmotionClass(i)"
-		[ngStyle]="{'background-color':  hexToRGB(emotion.color, '0.34') }">
+		[ngStyle]="{'background-color':  hexToRGB(emotion.color, '0.34') }"
+		[class.mat-elevation-z0]="!isEmotionSelected(emotion)" [class.mat-elevation-z9]="isEmotionSelected(emotion)"
+		(click)="markAsSelected(emotionCategories[index].category, emotion)">
 		<!-- Image -->
 		<div class="img-container">
 			<img [src]="emotion.image">
@@ -16,3 +18,13 @@
 		</div>
 	</li>
 </ul>
+
+<!-- Show selected categories as little circle at the bottom of screen -->
+<div class="selected-categories-container">
+	<div class="selected-category"
+		*ngFor="let selectedCategory of selectedCategories"
+		[ngStyle]="{'background-color': selectedCategory.color }">
+		
+		<img class="angry" [src]="'../../' + selectedCategory.image" />
+	</div>
+</div>

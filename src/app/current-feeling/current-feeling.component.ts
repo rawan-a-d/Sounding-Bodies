@@ -14,11 +14,11 @@ export class CurrentFeelingComponent implements OnInit {
 
 	// Emotions list grouped by category
 	public emotionCategories: EmotionCategory[] = []
-
+	
 	// Determine the direction of the emotion container (border radius)
 	isDirectionRight = true
 
-
+	// dragscroll
 	public options = {
 		"radius": 250,
 		"spinable": true,
@@ -51,7 +51,6 @@ export class CurrentFeelingComponent implements OnInit {
 	getScreenSize() {
 		this.scrHeight = window.innerHeight;
 		this.scrWidth = window.innerWidth;
-		console.log(this.scrHeight, this.scrWidth);
 	}
 	
 
@@ -105,7 +104,11 @@ export class CurrentFeelingComponent implements OnInit {
 
 	// Get the category selection from dragscroll in desktop/tablet view
 	changeCategorySelection(index: string) {
-		console.log("HOHO")
 		this.index = +index
+	}
+	
+	// On confirm redirect to desired feeling
+	confirm() {
+		
 	}
 }

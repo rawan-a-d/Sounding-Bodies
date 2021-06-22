@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Emotion } from 'src/app/models/Emotion';
 import { EmotionCategory } from 'src/app/models/EmotionCategory';
 import { EmotionService } from 'src/app/services/emotion.service';
 
@@ -16,6 +17,10 @@ export class EmotionsComponent implements OnInit {
 
 	// Emotions list grouped by category
 	public emotionCategories: EmotionCategory[] = []
+	
+	// Selected emotions and categories lists
+	public selectedEmotions: Emotion[] = []
+	public selectedCategories: Emotion[] = []
 
 
 	constructor(private emotionService: EmotionService) {
@@ -45,6 +50,7 @@ export class EmotionsComponent implements OnInit {
 		return className
 	}
 
+	// Change direction of border radius
 	changeDirection(index: number) {
 		// if odd number -> change direction
 		if (index % 2 != 0) {
@@ -52,7 +58,7 @@ export class EmotionsComponent implements OnInit {
 		}
 	}
 
-	// change hex to rgba
+	// Change hex to rgba
 	hexToRGB(hex: string, alpha: string) {
 		const r = parseInt(hex.slice(1, 3), 16)
 		const g = parseInt(hex.slice(3, 5), 16)
@@ -63,5 +69,23 @@ export class EmotionsComponent implements OnInit {
 		} else {
 			return `rgb(${r}, ${g}, ${b})`
 		}
+	}
+	
+	// Mark category as selected
+	markAsSelected(category: Emotion, emotion: Emotion) {
+		// if category wasn't already added
+		if(this.selectedCategories.indexOf(category) == -1) {
+			this.selectedCategories.push(category)
+		}
+	
+		// if emotion wasn't already added
+		if(this.selectedEmotions.indexOf(emotion) == -1) {
+			this.selectedEmotions.push(emotion)
+		}
+	}
+	
+	// Is provided emotion selected
+	isEmotionSelected(emotion: Emotion) {
+		return this.selectedEmotions.indexOf(emotion) != -1
 	}
 }

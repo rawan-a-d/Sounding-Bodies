@@ -14,9 +14,13 @@ li.emotion-container {
 	overflow: hidden;
 	flex-direction: column;
 	width: 45%;
-	height: 275px;
-	margin-top: 3%;
+    height: 271px;
+    margin-top: 3%;
 	margin-bottom: 6%;
+}
+
+li.emotion-container:last-child {
+	margin-bottom: 27%;
 }
 
 /* Emotion with border radius directed to the left */
@@ -57,30 +61,28 @@ li.emotion-container > .emotion-name-container > h3 {
 }
 
 
-								/* Description Large screen */
-#desc {
+								/* Selected categories */
+/* container */
+.selected-categories-container {
+	position: sticky;
+	bottom: 12vh;
 	text-align: center;
-	font-weight: bold;
-	font-size: 1.7em;
-	color: white;
-	letter-spacing: 7px;
-	margin-top: 6%;
 }
 
-
-								/* Wave */
-svg.wave {
-	position: absolute;
-	left: 0;
-	z-index: -1;
+/* selected category circle */
+.selected-category {
+	display: inline-block;
+	border-radius: 50%;
+	margin-left: 2%;
+	width: 15vw;
+	height: 15vw;
+	text-align: center;
 }
 
-.light-wave {
-	top: 5%;
-}
-
-.dark-wave {
-	top: 0;
+/* img in selected category circle */
+.selected-category > img {
+	height: 80%;
+	margin: 10% auto;
 }
 
 
@@ -95,6 +97,11 @@ svg.wave {
 	.img-container > img {
 		height: 100% 
 	}
+	
+	.selected-category {
+		width: 8vw;
+		height: 8vw;
+	}
 }
 
 @media only screen and (min-width: 1000px) {
@@ -103,7 +110,20 @@ svg.wave {
 		margin: 2% 25%;
 	}
 	
+	li.emotion-container:last-child {
+		margin-bottom: 16%;
+	}
+	
 	.img-container > img {
 		height: 100% 
+	}
+	
+	.selected-category {
+		display: inline-block;
+		border-radius: 50%;
+		margin-left: 2%;
+		width: 5vw;
+		height: 5vw;
+		text-align: center;
 	}
 }
