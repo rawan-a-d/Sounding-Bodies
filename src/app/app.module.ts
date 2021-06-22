@@ -9,6 +9,7 @@ import { DragscrollComponent } from './dragscroll/dragscroll.component';
 import { CurrentFeelingComponent } from './current-feeling/current-feeling.component';
 import { CategoriesComponent } from './current-feeling/categories/categories.component';
 import { LogInComponent } from './log-in/log-in.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { LogInComponent } from './log-in/log-in.component';
     DragscrollComponent,
     CurrentFeelingComponent,
     CategoriesComponent,
-    LogInComponent
+    LogInComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
