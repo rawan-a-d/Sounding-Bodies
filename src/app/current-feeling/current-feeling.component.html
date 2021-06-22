@@ -1,8 +1,8 @@
-
 <!-- Categories -->
 <!-- small Screen -->
 <app-categories *ngIf="scrWidth < 768; else largeScreen" 
 				(newCategorySelectionEvent)="changeCategorySelection($event)"></app-categories>
+				
 <!-- large screen -->
 <ng-template #largeScreen>
 	<!-- Wave -->
@@ -16,22 +16,5 @@
 					(newCategorySelectionEvent)="changeCategorySelection($event)"></app-dragscroll>
 </ng-template>
 
-
 <!-- Emotions -->
-<ul class="emotions-container">
-	<!-- Emotion -->
-	<li class="emotion-container"
-		*ngFor="let emotion of emotionCategories[index].emotions; let i = index; let lastcall=last"
-		[ngClass]="getEmotionClass(i)"
-		[ngStyle]="{'background-color':  hexToRGB(emotion.color, '0.34') }">
-		<!-- Image -->
-		<div class="img-container">
-			<img [src]="emotion.image">
-		</div>
-		<!-- Emotion name -->
-		<div class="emotion-name-container"
-			[ngStyle]="{'background-color':  hexToRGB(emotion.color, '1') }">
-			<h3>{{emotion.name}}</h3>
-		</div>
-	</li>
-</ul>
+<app-emotions [index]="index"></app-emotions>

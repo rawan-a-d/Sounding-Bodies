@@ -14,6 +14,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { DragscrollComponent } from './current-feeling/dragscroll/dragscroll.component';
+import { EmotionsComponent } from './current-feeling/emotions/emotions.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { DragscrollComponent } from './current-feeling/dragscroll/dragscroll.com
 		DragscrollComponent,
 		CurrentFeelingComponent,
 		CategoriesComponent,
+  EmotionsComponent,
 
 	],
 	imports: [

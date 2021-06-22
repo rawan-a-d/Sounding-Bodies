@@ -1,0 +1,18 @@
+<!-- Emotions -->
+<ul class="emotions-container">
+	<!-- Emotion -->
+	<li class="emotion-container"
+		*ngFor="let emotion of emotionCategories[index].emotions; let i = index; let lastcall=last"
+		[ngClass]="getEmotionClass(i)"
+		[ngStyle]="{'background-color':  hexToRGB(emotion.color, '0.34') }">
+		<!-- Image -->
+		<div class="img-container">
+			<img [src]="emotion.image">
+		</div>
+		<!-- Emotion name -->
+		<div class="emotion-name-container"
+			[ngStyle]="{'background-color':  hexToRGB(emotion.color, '1') }">
+			<h3>{{emotion.name}}</h3>
+		</div>
+	</li>
+</ul>

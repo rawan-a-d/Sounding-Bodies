@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DragscrollComponent } from './dragscroll.component';
+import { EmotionsComponent } from './emotions.component';
 
-describe('DragscrollComponent', () => {
-  let component: DragscrollComponent;
-  let fixture: ComponentFixture<DragscrollComponent>;
+describe('EmotionsComponent', () => {
+  let component: EmotionsComponent;
+  let fixture: ComponentFixture<EmotionsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DragscrollComponent ]
+      declarations: [ EmotionsComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DragscrollComponent);
+    fixture = TestBed.createComponent(EmotionsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

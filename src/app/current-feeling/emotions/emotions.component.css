@@ -1,0 +1,109 @@
+							/* ul, container around emotions */
+ul.emotions-container {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+	justify-content: space-evenly; 
+}
+
+
+							/* Individual emotion */
+li.emotion-container {
+	text-align: center;
+	overflow: hidden;
+	flex-direction: column;
+	width: 45%;
+	height: 275px;
+	margin-top: 3%;
+	margin-bottom: 6%;
+}
+
+/* Emotion with border radius directed to the left */
+.emotion-container.radius-left {
+	border-radius: 100px 10px 60px 10px;
+}
+
+/* Emotion with border radius directed to the right */
+.emotion-container.radius-right {
+	border-radius: 10px 100px 10px 60px;
+}
+
+/* .emotion-container.first {
+	margin-top: 20px;
+} */
+
+
+									/* Emotion image */
+/* Container */
+.img-container {
+	height: 80%;
+}
+
+/* Image */
+.img-container > img {
+	/* width: 80%; */
+	height: 80%;
+	padding: 10%;
+}
+
+/* text */
+li.emotion-container > .emotion-name-container > h3 {
+	height: 54px;
+	color: white;
+	margin: 0;
+	line-height: 54px;
+	font-size: 1.2em;
+}
+
+
+								/* Description Large screen */
+#desc {
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.7em;
+	color: white;
+	letter-spacing: 7px;
+	margin-top: 6%;
+}
+
+
+								/* Wave */
+svg.wave {
+	position: absolute;
+	left: 0;
+	z-index: -1;
+}
+
+.light-wave {
+	top: 5%;
+}
+
+.dark-wave {
+	top: 0;
+}
+
+
+
+									/* Media Queries */
+@media only screen and (min-width: 768px) {
+	ul.emotions-container {
+		width: 60%;
+		margin: 2% 20%;
+	}
+	
+	.img-container > img {
+		height: 100% 
+	}
+}
+
+@media only screen and (min-width: 1000px) {
+	ul.emotions-container {
+		width: 50%;
+		margin: 2% 25%;
+	}
+	
+	.img-container > img {
+		height: 100% 
+	}
+}
