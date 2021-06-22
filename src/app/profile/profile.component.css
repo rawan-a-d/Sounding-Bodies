@@ -1,4 +1,5 @@
   
+    /* Profile Image */
     .imgcontainer {
         text-align: center;
     }
@@ -14,6 +15,7 @@
         padding: 16px;
     }
 
+    /* Labels */
     .data{
         margin-left: 4em;
         margin-bottom: 10%;
@@ -27,6 +29,7 @@
         text-align: center;
     }
 
+    /* History Mood Container */
     .historycontainer{
         background-color: lightgray;
     }
@@ -45,6 +48,7 @@
         display: table;
     }
 
+    /* Mood images */
     img.angry{
         width: 70%;
         height: 70%;
@@ -90,7 +94,6 @@
     svg.wave {
         position: absolute;
         left: 0;
-        /* z-index: -1; */
     }
 
     .light-wave {
