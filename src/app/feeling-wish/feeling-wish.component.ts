@@ -1,13 +1,39 @@
+import {
+	animate,
+	state,
+	style,
+	transition,
+	trigger,
+} from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { Emotion } from "../models/Emotion";
+import { CommonModule } from '@angular/common';
 import { EmotionCategory } from '../models/EmotionCategory';
 
 
 @Component({
   selector: 'app-feeling-wish',
   templateUrl: './feeling-wish.component.html',
-  styleUrls: ['./feeling-wish.component.css']
+  styleUrls: ['./feeling-wish.component.css'],
+
+  // Animation
+	animations: [
+		// the fade-in/fade-out animation.
+		trigger('svgsFade', [
+			// the "in" style determines the "resting" state of the element when it is visible.
+			state('in', style({ opacity: 1 })),
+
+			// fade in when created. this could also be written as transition('void => *')
+			transition(':enter', [
+				style({ opacity: 0 }),
+				animate('1s 0.3s ease-in'), // last 0.5s, delay 0.3s
+			]),
+
+		]),
+  ],
 })
+
+
 export class FeelingWishComponent implements OnInit {
 
   public emotions: Emotion[] = [
@@ -29,6 +55,7 @@ export class FeelingWishComponent implements OnInit {
 
   // Determine the direction of the emotion container (border radius)
   isDirectionRight = true
+
 
   // Apply class to each emotion based on index
   getEmotionClass(index: number) {
@@ -70,18 +97,18 @@ export class FeelingWishComponent implements OnInit {
     }
   }
 
+  svg_color_global = "#e06386"
+
   setColor(color: string){
     var svg_color = document.getElementById("svg-path-1");
     var svg_color1 = document.getElementById("svg-path-2");
 
-    if(svg_color != null && svg_color1 != null){
-      // svg_color.style.fill = color;
-      // svg_color1.style.fill = color;
+    if(this.svg_color_global != null && svg_color != null && svg_color1 != null){
+      // this.isChanged = !this.isChanged;
 
-      document.documentElement.style.setProperty("--animation-color", color)
-      document.documentElement.style.setProperty("--animation-state", "running")
-      
-      console.log(document.documentElement.style.getPropertyValue("--animation-color"));
+      this.svg_color_global = color;
+      svg_color.style.fill = color;
+      svg_color1.style.fill = color;
     }
   }
 }

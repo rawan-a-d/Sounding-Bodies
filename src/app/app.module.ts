@@ -29,7 +29,8 @@ import { FeelingWishComponent } from './feeling-wish/feeling-wish.component';
 		CategoriesComponent,
         EmotionsComponent,
 		LogInComponent,
-        ProfileComponent
+        ProfileComponent,
+		FeelingWishComponent
 	],
 	imports: [
 		BrowserModule,
