@@ -10,7 +10,7 @@ import { ProfileComponent } from "./profile/profile.component";
 import { AppSettingsComponent } from "./app-settings/app-settings.component";
 
 const routes: Routes = [
-    {path: 'app', component: AppComponent},
+    {path: '', redirectTo: 'log-in', pathMatch: 'full'},
     {path: 'current-feeling', component: CurrentFeelingComponent},
     {path: 'video-session', component: VideoSessionComponent},
     {path: 'log-in', component: LogInComponent},

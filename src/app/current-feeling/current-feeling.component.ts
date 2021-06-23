@@ -1,5 +1,6 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { ChangeDetectionStrategy, Component, HostListener, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Emotion } from '../models/Emotion';
 import { EmotionCategory } from '../models/EmotionCategory';
 import { EmotionService } from '../services/emotion.service';
@@ -54,7 +55,8 @@ export class CurrentFeelingComponent implements OnInit {
 	}
 	
 
-	constructor(private emotionService: EmotionService) {
+	constructor(private emotionService: EmotionService,
+				private router: Router) {
 		this.getScreenSize();
 	}
 
@@ -113,6 +115,6 @@ export class CurrentFeelingComponent implements OnInit {
 	
 	// On confirm redirect to desired feeling
 	confirm() {
-		
+		this.router.navigate(['want-to-feel']);
 	}
 }
