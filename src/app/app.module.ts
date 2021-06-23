@@ -12,7 +12,7 @@ import { CategoriesComponent } from './current-feeling/categories/categories.com
 import { LogInComponent } from './log-in/log-in.component';
 import { ProfileComponent } from './profile/profile.component';
 
-import { FanMenuModule } from 'fan-menu';
+// import { FanMenuModule } from 'fan-menu';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -35,7 +35,7 @@ import { EmotionsComponent } from './current-feeling/emotions/emotions.component
 		BrowserAnimationsModule,
 		WheelSelectorModule,
 		DragScrollModule,
-		FanMenuModule,
+		// FanMenuModule,
 		FontAwesomeModule,
 		MatButtonModule,
 		MatIconModule
