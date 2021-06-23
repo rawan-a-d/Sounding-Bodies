@@ -8,26 +8,32 @@
 	  <img src="http://soundingbodies.com/wp-content/themes/swell-2017/img/374x120_sounding_bodies_vibrate_15fps_v2.gif" alt="Avatar" class="avatar">
 	</div>
   
+	<!-- Inputs -->
 	<div class="container">
-	  <input type="text" placeholder="maya@gmail.com" name="uname" required>
+	  <input type="text" placeholder="maya@gmail.com" required>
   
-	  <input type="password" placeholder="*******" name="psw" required>
+	  <input type="password" placeholder="*******" required>
 
+	  <!-- Forgot password -->
 	  <div class="sign">
 		Forgot your password?
 	  </div>
-		  
-	  <button type="submit" class="login">Login</button>
+
+	  <!-- LogIn Button -->
+	  <button type="submit" class="login" id="logIn" (click)="logIn()">LogIn</button>
 	  
+	  <!-- Sign up -->
 	  <div class="sign">
 		Don't have an acount? Sign up
 	  </div>
 
+	  <!-- Use accounts to sign up -->
 	  <div class="options">
 		<a href="#" class="fa fa-facebook"></a>
 		<a href="#" class="fa fa-google"></a>
 	  </div>
 
+	  <!-- Sign up later -->
 	  <div class="sign">
 		Or sign up later
 	  </div>
