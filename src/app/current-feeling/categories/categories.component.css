@@ -1,0 +1,169 @@
+body {
+	background: #151515;
+	/* overflow-x: clip; */
+	width: 100%;
+	padding: 10%;
+}
+
+.wheel-container {
+	overflow: hidden;
+	height: 43%;
+	/* position: relative; */
+}
+
+
+									/* Circle */
+#menu {
+	border-radius: 50%;
+	overflow: visible;
+	border-width: 10px;
+	border-style: solid;
+	border-color: #e06386;
+	background-color: #e06386;
+	color: #ffffff;
+	transition: all 1s ease-in-out 0.5s;
+	text-align: center;
+	position: relative;
+	width: 110%;
+	/* Define height with the same value as the width */
+	padding-top: 110%;
+	margin-top: -55%;
+	left: -5%;
+}
+
+
+									/* Emotions circles */
+.item {
+	/* border-width: 10px;
+	border-style: solid; */
+	line-height: 76px;
+	border-radius: 50%;
+	position: absolute;
+	box-sizing: border-box;
+	text-align: center;
+	font-weight: bold;
+	font-size: 11px;
+	text-transform: uppercase;
+	transform: rotate(0deg);
+	cursor: pointer;
+	transition: all 1s ease-in-out 0s;
+	width: 30%;
+	height: 30%;
+}
+
+/* angry */
+.item1 {
+	background-color: #faa2a2;
+	top: 10%;
+	left: -13%;
+}
+
+/* afraid */
+.item2 {
+	top: 60%;
+	left: -12%;
+	background-color: #b1bed5;
+}
+
+/* sad */
+.item3 {
+	background-color: #a2c3fa;
+	left: 33%;
+	top: 86%;
+}
+
+/* neutral */
+.item4 {	
+	top: 60%;
+	left: 81%;
+	background-color: #dddddd;
+}
+
+/* happy */
+.item5 {
+	background-color: #fed1ae;
+	top: 12%;
+	left: 84%;
+}
+
+
+									/* Images */
+img {
+	height: 80%;
+	margin-top: 5%;
+}
+
+
+									/* Emotions on click */
+.pm_angry {
+	transform: rotate(-115deg);
+}
+
+.pm_angry .item {
+	transform: rotate(115deg);
+}
+
+.pm_afraid {
+	transform: rotate(-57deg);
+}
+
+.pm_afraid .item {
+	transform: rotate(57deg);
+}
+
+.pm_neutral {
+	transform: rotate(57deg);
+}
+
+.pm_neutral .item {
+	transform: rotate(-57deg);
+}
+
+.pm_happy {
+	transform: rotate(115deg);
+}
+
+.pm_happy .item {
+	transform: rotate(-115deg);
+}
+
+
+									/* Text inside cirle */
+.circle-txt {
+	position: absolute;
+	text-align: center;
+	font-family: arial, sans-serif;
+	font-weight: bold;
+	position: absolute;
+	top: 12%;
+	left: 26%;
+	font-weight: bold;
+	font-size: 1.2em;
+	color: white;
+	letter-spacing: 7px;
+}
+
+
+
+									/* Media Queries */
+@media only screen and (max-width: 320px) {
+	.circle-txt {
+		left: 24%;
+		font-size: 1em;
+	}
+
+}
+
+@media only screen and (min-width: 414px) {
+	.circle-txt {
+		left: 25%;
+		font-size: 1.4em;
+	}
+
+}
+
+@media only screen and (min-height: 800px) {
+	.menu-container {
+		height: 39%;
+	}
+}

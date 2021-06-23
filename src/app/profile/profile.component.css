@@ -1,0 +1,107 @@
+  
+    /* Profile Image */
+    .imgcontainer {
+        text-align: center;
+    }
+    
+    img.avatar {
+        margin-top: 8%;
+        width: 100%;
+        border-radius: 10%;
+        position: relative;
+    }
+    
+    .container {
+        padding: 16px;
+    }
+
+    /* Labels */
+    .data{
+        margin-left: 4em;
+        margin-bottom: 10%;
+    }
+    
+    .label{
+        font-weight: bold;
+    }
+
+    .name{
+        text-align: center;
+    }
+
+    /* History Mood Container */
+    .historycontainer{
+        background-color: lightgray;
+    }
+
+    /* Three image containers (use 25% for four, and 50% for two, etc) */
+    .column {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+    }
+  
+    /* Clear floats after image containers */
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    /* Mood images */
+    img.angry{
+        width: 70%;
+        height: 70%;
+        border-radius: 50%;
+        background: rgb(235, 126, 126);
+    }
+
+    img.meh{
+        width: 70%;
+        height: 70%;
+        border-radius: 50%;
+        background: lightgray;
+    }
+
+    .row{
+        background-color: rgb(233, 230, 230);
+        border-radius: 10px;
+    }
+
+    /* Style the tab */
+    .tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #E06386;
+        width: 42%;
+        border-radius: 10px;
+    }
+  
+    /* Style the buttons inside the tab */
+    .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+        color: white;
+    }
+
+    /* Wave */
+    svg.wave {
+        position: absolute;
+        left: 0;
+    }
+
+    .light-wave {
+        top: 3%;
+    }
+
+    .dark-wave {
+        top: 0;
+    }
+        
+      

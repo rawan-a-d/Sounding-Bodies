@@ -1,13 +1,21 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Emotion } from '../models/Emotion';
-import { EmotionCategory } from '../models/EmotionCategory';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'app-profile',
-    templateUrl: './profile.component.html',
-    styleUrls: ['./profile.component.css']
-  })
+  selector: 'app-profile',
+  templateUrl: './profile.component.html',
+  styleUrls: ['./profile.component.css']
+})
+export class ProfileComponent implements OnInit {
 
-  export class ProfileComponent {
-      
+  constructor() { }
+
+  hide : boolean = true;
+
+  ngOnInit(): void {
   }
+
+  myFunction() {
+    this.hide = !this.hide;
+  }
+
+}
