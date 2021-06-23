@@ -27,6 +27,8 @@
     "@igniteui/material-icons-extended": "^2.7.0",
     "@juggle/resize-observer": "^3.3.0",
     "@mdi/angular-material": "^5.9.55",
+    "@vime/angular": "^5.0.31",
+    "@vime/core": "^5.0.31",
     "classlist.js": "1.1.20150312",
     "fan-menu": "0.0.5",
     "hammerjs": "^2.0.8",

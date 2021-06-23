@@ -9,14 +9,11 @@ import { appRoutingModule } from './app.routing';
 import { DragScrollModule } from 'ngx-drag-scroll';
 import { CurrentFeelingComponent } from './current-feeling/current-feeling.component';
 import { CategoriesComponent } from './current-feeling/categories/categories.component';
-import { LogInComponent } from './log-in/log-in.component';
 import { ProfileComponent } from './profile/profile.component';
-import { HeaderComponent } from './header/header.component';
 import { VideoSessionComponent } from "./video-session/video-session.component";
-import { LoginComponent } from "./login/login.component";
+import { LogInComponent } from "./log-in/log-in.component";
 import { SignupComponent } from "./signup/signup.component";
 import { WantToFeelComponent } from "./want-to-feel/want-to-feel.component";
-import { ProfileComponent } from "./profile/profile.component";
 import { AppSettingsComponent } from "./app-settings/app-settings.component";
 
 import { FanMenuModule } from 'fan-menu';
@@ -33,9 +30,13 @@ import { EmotionsComponent } from './current-feeling/emotions/emotions.component
 		DragscrollComponent,
 		CurrentFeelingComponent,
 		CategoriesComponent,
-        EmotionsComponent,
+    	EmotionsComponent,
 		LogInComponent,
-        ProfileComponent
+    	ProfileComponent,
+    	SignupComponent,
+    	VideoSessionComponent,
+    	WantToFeelComponent,
+    	AppSettingsComponent
 	],
 	imports: [
 		BrowserModule,
@@ -45,7 +46,11 @@ import { EmotionsComponent } from './current-feeling/emotions/emotions.component
 		FanMenuModule,
 		FontAwesomeModule,
 		MatButtonModule,
-		MatIconModule
+		MatIconModule,
+    	VimeModule,
+    	appRoutingModule
+    
+
 	],
 	exports: [
 		MatButtonModule,
@@ -56,28 +61,6 @@ import { EmotionsComponent } from './current-feeling/emotions/emotions.component
 	],
 	providers: [],
 	bootstrap: [AppComponent]
-  declarations: [
-    AppComponent,
-    DragscrollComponent,
-    CurrentFeelingComponent,
-    CategoriesComponent,
-    HeaderComponent,
-    VideoSessionComponent,
-    LoginComponent,
-    SignupComponent,
-    WantToFeelComponent,
-    ProfileComponent,
-    AppSettingsComponent
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    DragScrollModule,
-    appRoutingModule,
-    VimeModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
 })
 export class AppModule {
 }
