@@ -9,7 +9,6 @@ import { WheelSelectorModule } from '@hyperblob/ngx-wheel-selector';
 import { DragScrollModule } from 'ngx-drag-scroll';
 import { CurrentFeelingComponent } from './current-feeling/current-feeling.component';
 import { CategoriesComponent } from './current-feeling/categories/categories.component';
-import { FanMenuModule } from 'fan-menu';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -23,7 +22,7 @@ import { EmotionsComponent } from './current-feeling/emotions/emotions.component
 		DragscrollComponent,
 		CurrentFeelingComponent,
 		CategoriesComponent,
-  EmotionsComponent,
+        EmotionsComponent,
 
 	],
 	imports: [
@@ -31,7 +30,6 @@ import { EmotionsComponent } from './current-feeling/emotions/emotions.component
 		BrowserAnimationsModule,
 		WheelSelectorModule,
 		DragScrollModule,
-		FanMenuModule,
 		FontAwesomeModule,
 		MatButtonModule,
 		MatIconModule
