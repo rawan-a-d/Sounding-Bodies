@@ -1,0 +1,34 @@
+<div class="content">
+	<!-- Previous button -->
+	<div class="left-button-container">
+		<button mat-fab color="accent" 
+				aria-label="Example icon button with a left arrow icon"
+				(click)="moveLeft()">
+			<mat-icon>keyboard_arrow_left</mat-icon>
+		</button>
+	</div>
+
+	<!-- Show the main emotions, detect the index of the image-->
+	<drag-scroll class="emotions" (indexChanged)="onIndexChanged($event)" #nav>
+		<img drag-scroll-item *ngFor="let emotionCategory of emotionCategories; let i = index"
+								[src]="'../../' + emotionCategory.category.image"
+								[class]="emotionCategory.category.name.toLowerCase()"
+								[ngClass]="{'active':  isCurrentIndex(i) }"
+								[ngStyle]="{'background-color':  emotionCategory.category.color }"
+								[class.mat-elevation-z2]="!isCurrentIndex(i)" [class.mat-elevation-z9]="isCurrentIndex(i)"/>
+	</drag-scroll>
+	
+	<!-- Next button -->
+	<div class="right-button-container">
+		<button mat-fab color="accent" 
+				aria-label="Example icon button with a right arrow icon"
+				(click)="moveRight()">
+			<mat-icon>keyboard_arrow_right</mat-icon>
+		</button>
+	</div>	
+</div>
+
+
+
+<!-- Go to child component through the index -->
+<!-- <app-current-feeling [index]="index"></app-current-feeling> -->
