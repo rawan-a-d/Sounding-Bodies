@@ -8,8 +8,9 @@ import { EmotionService } from 'src/app/services/emotion.service';
 	templateUrl: './categories.component.html',
 	styleUrls: ['./categories.component.css']
 })
-export class CategoriesComponent implements OnInit {
-	menuClass = 'menu'
+export class CategoriesComponent implements OnInit, AfterViewInit {
+	// start wheel from angry
+	menuClass = 'menu pm_angry'
 
 	@Output() newCategorySelectionWheelEvent = new EventEmitter<string>();
 
@@ -18,9 +19,18 @@ export class CategoriesComponent implements OnInit {
 
 	constructor(private emotionService: EmotionService) {
 	}
+	
 
 	ngOnInit(): void {
 		this.emotionCategories = this.emotionService.getAll()
+	}
+	
+	
+	ngAfterViewInit() {
+		// rotate wheel to sad
+		setTimeout(() => {
+			this.changeEmotion('sad', 2)
+		}, 300);
 	}
 
 	changeEmotion(emotion: string, index: number) {

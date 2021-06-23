@@ -1,7 +1,7 @@
 <!-- Emotions -->
 <ul class="emotions-container">
 	<!-- Emotion -->
-	<li class="emotion-container"
+	<li class="emotion-container" [@fadeAnimation]
 		*ngFor="let emotion of emotionCategories[index].emotions; let i = index; let lastcall=last"
 		[ngClass]="getEmotionClass(i)"
 		[ngStyle]="{'background-color':  hexToRGB(emotion.color, '0.34') }"

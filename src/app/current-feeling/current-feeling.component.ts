@@ -1,3 +1,4 @@
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { ChangeDetectionStrategy, Component, HostListener, Input, OnInit } from '@angular/core';
 import { Emotion } from '../models/Emotion';
 import { EmotionCategory } from '../models/EmotionCategory';
@@ -6,7 +7,7 @@ import { EmotionService } from '../services/emotion.service';
 @Component({
 	selector: 'app-current-feeling',
 	templateUrl: './current-feeling.component.html',
-	styleUrls: ['./current-feeling.component.css']
+	styleUrls: ['./current-feeling.component.css'],
 })
 export class CurrentFeelingComponent implements OnInit {
 	@Input() index = 0;
@@ -62,7 +63,7 @@ export class CurrentFeelingComponent implements OnInit {
 		this.emotionCategories = this.emotionService.getAll()
 		
 		// change index to middle index
-		this.index =  Math.floor(this.emotionCategories.length  / 2)
+		// this.index =  Math.floor(this.emotionCategories.length  / 2)
 	}
 
 
