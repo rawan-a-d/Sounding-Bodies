@@ -1,0 +1,13 @@
+<!-- Emotions wheel -->
+<div class="wheel-container">
+	<div [class]="menuClass" id="menu">
+
+		<div *ngFor="let emotionCategory of emotionCategories; let i = index" 
+			[class]="'item item' + +(i + 1)">
+			<img class="angry" [src]="'../../' + emotionCategory.category.image" (click)="changeEmotion(emotionCategory.category.name.toLowerCase(), i)" />
+		</div>
+	</div>
+	
+	<!-- Text inside circle -->
+	<div class="circle-txt">I'M FEELING</div>
+</div>
