@@ -1,0 +1,13 @@
+/* Default theme. ~960B */
+@import '~@vime/core/themes/default.css';
+
+/* Optional light theme (extends default). ~400B */
+@import '~@vime/core/themes/light.css';
+
+vm-player {
+    --vm-player-theme: #de4269;
+  }
+
+vm-player[mobile] {
+    /* Add styles here for when the player is loaded on a mobile device. */
+  }

@@ -1,16 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-
+import { VimeModule } from '@vime/angular';
 import { AppComponent } from './app.component';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { WheelSelectorModule } from '@hyperblob/ngx-wheel-selector';
+import { appRoutingModule } from './app.routing';
 import { DragScrollModule } from 'ngx-drag-scroll';
 import { CurrentFeelingComponent } from './current-feeling/current-feeling.component';
 import { CategoriesComponent } from './current-feeling/categories/categories.component';
-import { LogInComponent } from './log-in/log-in.component';
 import { ProfileComponent } from './profile/profile.component';
+import { VideoSessionComponent } from "./video-session/video-session.component";
+import { LogInComponent } from "./log-in/log-in.component";
+import { SignupComponent } from "./signup/signup.component";
+import { WantToFeelComponent } from "./want-to-feel/want-to-feel.component";
+import { AppSettingsComponent } from "./app-settings/app-settings.component";
 
 // import { FanMenuModule } from 'fan-menu';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -26,9 +30,13 @@ import { EmotionsComponent } from './current-feeling/emotions/emotions.component
 		DragscrollComponent,
 		CurrentFeelingComponent,
 		CategoriesComponent,
-        EmotionsComponent,
+    	EmotionsComponent,
 		LogInComponent,
-        ProfileComponent
+    	ProfileComponent,
+    	SignupComponent,
+    	VideoSessionComponent,
+    	WantToFeelComponent,
+    	AppSettingsComponent
 	],
 	imports: [
 		BrowserModule,
@@ -38,7 +46,11 @@ import { EmotionsComponent } from './current-feeling/emotions/emotions.component
 		// FanMenuModule,
 		FontAwesomeModule,
 		MatButtonModule,
-		MatIconModule
+		MatIconModule,
+    	VimeModule,
+    	appRoutingModule
+    
+
 	],
 	exports: [
 		MatButtonModule,

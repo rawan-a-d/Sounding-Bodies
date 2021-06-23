@@ -63,3 +63,8 @@ svg.wave {
 		width: 15%;
 	}
 }
+
+li > .emotion-name-container {
+    padding-top: 10px;
+    height: 74px;
+}
