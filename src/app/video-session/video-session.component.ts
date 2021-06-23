@@ -7,7 +7,18 @@ import { EmotionCategory } from '../models/EmotionCategory';
     templateUrl: './video-session.component.html',
     styleUrls: ['./video-session.component.css']
   })
+  
+    
 
   export class VideoSessionComponent {
-      
+    isMenuActive = false;
+    videoUrl = "https://media.vimejs.com/720p.mp4"
+
+    onOpen() {
+      this.isMenuActive = true;
+    }
+  
+    onClose() {
+      this.isMenuActive = false;
+    }
   }

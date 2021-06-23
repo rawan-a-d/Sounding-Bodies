@@ -8,10 +8,11 @@ import { SignupComponent } from "./signup/signup.component";
 import { WantToFeelComponent } from "./want-to-feel/want-to-feel.component";
 import { ProfileComponent } from "./profile/profile.component";
 import { AppSettingsComponent } from "./app-settings/app-settings.component";
+import { DragscrollComponent } from './dragscroll/dragscroll.component';
 
 const routes: Routes = [
     {path: 'app', component: AppComponent},
-    {path: 'current-feeling', component: CurrentFeelingComponent},
+    {path: 'current-feeling', component: DragscrollComponent},
     {path: 'video-session', component: VideoSessionComponent},
     {path: 'login', component: LoginComponent},
     {path: 'signup', component: SignupComponent},
