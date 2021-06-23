@@ -1,4 +1,4 @@
-import { Component, HostListener, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostListener, Input, OnInit } from '@angular/core';
 import { Emotion } from '../models/Emotion';
 import { EmotionCategory } from '../models/EmotionCategory';
 import { EmotionService } from '../services/emotion.service';
@@ -10,7 +10,6 @@ import { EmotionService } from '../services/emotion.service';
 })
 export class CurrentFeelingComponent implements OnInit {
 	@Input() index = 0;
-	//index = 0;
 
 	// Emotions list grouped by category
 	public emotionCategories: EmotionCategory[] = []
@@ -59,7 +58,11 @@ export class CurrentFeelingComponent implements OnInit {
 	}
 
 	ngOnInit(): void {
+		// get emotions list
 		this.emotionCategories = this.emotionService.getAll()
+		
+		// change index to middle index
+		this.index =  Math.floor(this.emotionCategories.length  / 2)
 	}
 
 

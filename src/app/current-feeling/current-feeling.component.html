@@ -1,7 +1,7 @@
 <!-- Categories -->
 <!-- small Screen -->
 <app-categories *ngIf="scrWidth < 768; else largeScreen" 
-				(newCategorySelectionEvent)="changeCategorySelection($event)"></app-categories>
+				(newCategorySelectionWheelEvent)="changeCategorySelection($event)"></app-categories>
 				
 <!-- large screen -->
 <ng-template #largeScreen>
@@ -11,9 +11,9 @@
 	<h3 id="desc">I'M FEELING</h3>
 	
 	<!-- Drag scroll -->
-	<app-dragscroll [options]="options"                  
-					[gutter]="gutter"                    
-					[startAngles]="startAngles"                  
+	<app-dragscroll [options]="options"
+					[gutter]="gutter"
+					[startAngles]="startAngles"
 					(newCategorySelectionEvent)="changeCategorySelection($event)"></app-dragscroll>
 </ng-template>
 

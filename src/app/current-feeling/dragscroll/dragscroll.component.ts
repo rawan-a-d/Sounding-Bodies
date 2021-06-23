@@ -12,7 +12,7 @@ import { EmotionCategory } from '../../models/EmotionCategory';
 	templateUrl: './dragscroll.component.html', 
 	styleUrls: ['./dragscroll.component.css']
 })
-export class DragscrollComponent implements OnInit, AfterViewInit {
+export class DragscrollComponent implements OnInit {
 	// Icons	
 	nextIcon = faChevronCircleRight
 	previousIcon = faChevronCircleLeft
@@ -38,7 +38,7 @@ export class DragscrollComponent implements OnInit, AfterViewInit {
 	ngAfterViewInit() {
 		// Starting ngx-drag-scroll from specified index(2)
 		setTimeout(() => {
-			this.ds.moveTo(2);
+			this.ds.moveTo(Math.floor(this.emotionCategories.length  / 2));
 		}, 2000);
 	}
 	
@@ -78,7 +78,9 @@ export class DragscrollComponent implements OnInit, AfterViewInit {
 			return this.ds.currIndex == index
 		}
 		else {
-			return this.emotionCategories.length / 2 - 1
+			// no category selected
+			return Math.floor(this.emotionCategories.length  / 2)
+			// return this.emotionCategories.length / 2 - 1
 		}
 	}
 	

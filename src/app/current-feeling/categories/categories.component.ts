@@ -1,5 +1,5 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { EmotionCategory } from 'src/app/models/EmotionCategory';
 import { EmotionService } from 'src/app/services/emotion.service';
 
@@ -11,7 +11,7 @@ import { EmotionService } from 'src/app/services/emotion.service';
 export class CategoriesComponent implements OnInit {
 	menuClass = 'menu'
 
-	@Output() newCategorySelectionEvent = new EventEmitter<string>();
+	@Output() newCategorySelectionWheelEvent = new EventEmitter<string>();
 
 	// Emotions list grouped by category
 	public emotionCategories: EmotionCategory[] = []
@@ -31,7 +31,7 @@ export class CategoriesComponent implements OnInit {
 
 	// Emit event to parent when selection changes
 	changeCategorySelection(index: string) {
-		this.newCategorySelectionEvent.emit(index);
+		this.newCategorySelectionWheelEvent.emit(index);
 	}
 
 	// track the indexes of the images
