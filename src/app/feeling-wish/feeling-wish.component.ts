@@ -3,8 +3,6 @@ import { Emotion } from "../models/Emotion";
 import { EmotionCategory } from '../models/EmotionCategory';
 
 
-declare var SVGMorpheus: any;
-
 @Component({
   selector: 'app-feeling-wish',
   templateUrl: './feeling-wish.component.html',
@@ -54,7 +52,7 @@ export class FeelingWishComponent implements OnInit {
   changeDirection(index: number) {
     // if odd number -> change direction
     if(index % 2 != 0) {
-      console.log("index " + index)
+      // console.log("index " + index)
       this.isDirectionRight = !this.isDirectionRight
     } 
   }
@@ -73,14 +71,17 @@ export class FeelingWishComponent implements OnInit {
   }
 
   setColor(color: string){
-    var svg = document.getElementById("svg-path1");
+    var svg_color = document.getElementById("svg-path-1");
+    var svg_color1 = document.getElementById("svg-path-2");
 
-    var morphModule = new SVGMorpheus(svg);
+    if(svg_color != null && svg_color1 != null){
+      // svg_color.style.fill = color;
+      // svg_color1.style.fill = color;
 
-    if(svg != null){
-      svg.style.fill = color;
-
-
+      document.documentElement.style.setProperty("--animation-color", color)
+      document.documentElement.style.setProperty("--animation-state", "running")
+      
+      console.log(document.documentElement.style.getPropertyValue("--animation-color"));
     }
   }
 }

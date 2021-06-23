@@ -1,3 +1,8 @@
+:root {
+  --animation-color: #e06386;
+  --animation-state: unset;
+}
+
 /* ul, container around emotions */
 ul.emotions-container {
   display: flex;
@@ -52,23 +57,39 @@ li > .emotion-name-container > h3 {
   line-height: 54px;
 }
 
-/* headers */
-.header {
-  /* width: 70vmin;
-  height: 10vmin;
-  background-color: #e06386;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 250px;
-  border-top: 0; */
+.svg-header {
   position: absolute;
   top: 0px;
   left: 0px;
 }
 
-#svg-path-2 {
-  display: none;
+.svg-wrapper2 {
+  margin: auto;
+  bottom: 0;
+  left: 0;
 }
 
 .svg-wrapper {
   margin-bottom: 20%;
+}
+
+@keyframes svg-animation {
+  from {
+    fill: #e06386;
+  }
+  to {
+    fill: var(--animation-color);
+  }
+}
+
+#svg-path-1 {
+  animation-name: svg-animation;
+  animation-iteration-count: infinite;
+  animation-play-state: var(--animation-state);
+}
+
+#svg-path-2 {
+  animation-name: svg-animation;
+  animation-iteration-count: infinite;
+  animation-play-state: var(--animation-state);
 }
