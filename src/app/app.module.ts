@@ -20,8 +20,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { DragscrollComponent } from './current-feeling/dragscroll/dragscroll.component';
 import { EmotionsComponent } from './current-feeling/emotions/emotions.component';
 
-import { FeelingWishComponent } from './feeling-wish/feeling-wish.component';
-
 @NgModule({
 	declarations: [
 		AppComponent,
