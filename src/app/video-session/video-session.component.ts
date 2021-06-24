@@ -12,7 +12,7 @@ import { EmotionCategory } from '../models/EmotionCategory';
 
   export class VideoSessionComponent {
     isMenuActive = false;
-    videoUrl = "https://media.vimejs.com/720p.mp4"
+    videoUrl = "./assets/video-session/sounding_bodies_demo.mp4"
 
     onOpen() {
       this.isMenuActive = true;
