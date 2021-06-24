@@ -92,4 +92,6 @@ li > .emotion-name-container > h3 {
   transform: translate(-50%, -50%);
   padding: auto 20px;
   padding: 0 30px;
+  background-color: #e06386;
+  transition: 500ms background-color;
 }
