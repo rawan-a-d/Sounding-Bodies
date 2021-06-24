@@ -103,12 +103,14 @@ export class WantToFeelComponent implements OnInit {
   setColor(color: string){
     var svg_color = document.getElementById("svg-path-1");
     var svg_color1 = document.getElementById("svg-path-2");
+    var button_color = document.getElementById("confirm")
 
-    if(this.svg_color_global != null && svg_color != null && svg_color1 != null){
+    if(this.svg_color_global != null && svg_color != null && svg_color1 != null && button_color != null){
       // this.isChanged = !this.isChanged;
 
       this.svg_color_global = color;
       svg_color.style.fill = color;
+      button_color.style.backgroundColor = color;
       svg_color1.style.fill = color;
     }
   }
