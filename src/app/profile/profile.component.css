@@ -50,15 +50,15 @@
 
     /* Mood images */
     img.angry{
-        width: 70%;
-        height: 70%;
+        width: 60%;
+        height: 60%;
         border-radius: 50%;
         background: rgb(235, 126, 126);
     }
 
     img.meh{
-        width: 70%;
-        height: 70%;
+        width: 60%;
+        height: 60%;
         border-radius: 50%;
         background: lightgray;
     }
