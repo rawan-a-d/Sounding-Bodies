@@ -12,17 +12,15 @@ import { CategoriesComponent } from './current-feeling/categories/categories.com
 import { ProfileComponent } from './profile/profile.component';
 import { VideoSessionComponent } from "./video-session/video-session.component";
 import { LogInComponent } from "./log-in/log-in.component";
-import { SignupComponent } from "./signup/signup.component";
 import { WantToFeelComponent } from "./want-to-feel/want-to-feel.component";
 import { AppSettingsComponent } from "./app-settings/app-settings.component";
-
-// import { FanMenuModule } from 'fan-menu';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { DragscrollComponent } from './current-feeling/dragscroll/dragscroll.component';
 import { EmotionsComponent } from './current-feeling/emotions/emotions.component';
 
+import { FeelingWishComponent } from './feeling-wish/feeling-wish.component';
 
 @NgModule({
 	declarations: [
@@ -33,7 +31,6 @@ import { EmotionsComponent } from './current-feeling/emotions/emotions.component
     	EmotionsComponent,
 		LogInComponent,
     	ProfileComponent,
-    	SignupComponent,
     	VideoSessionComponent,
     	WantToFeelComponent,
     	AppSettingsComponent
@@ -43,14 +40,11 @@ import { EmotionsComponent } from './current-feeling/emotions/emotions.component
 		BrowserAnimationsModule,
 		WheelSelectorModule,
 		DragScrollModule,
-		// FanMenuModule,
 		FontAwesomeModule,
 		MatButtonModule,
 		MatIconModule,
     	VimeModule,
     	appRoutingModule
-    
-
 	],
 	exports: [
 		MatButtonModule,
