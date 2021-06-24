@@ -19,13 +19,14 @@
     .data{
         margin-left: 4em;
         margin-bottom: 10%;
-    }
+    } 
     
     .label{
         font-weight: bold;
     }
 
     .name{
+        margin-top: 10px;
         text-align: center;
     }
 
