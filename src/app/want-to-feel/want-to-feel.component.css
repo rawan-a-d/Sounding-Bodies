@@ -95,3 +95,46 @@ li > .emotion-name-container > h3 {
   background-color: #e06386;
   transition: 500ms background-color;
 }
+
+/* Media Queries */
+@media only screen and (min-width: 768px) {
+  ul.emotions-container {
+    width: 60%;
+    margin: 2% 20%;
+  }
+
+  .img-container > img {
+    height: 100%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  ul.emotions-container {
+    width: 50%;
+    margin: 2% 25%;
+  }
+
+  .img-container > img {
+    height: 100%;
+  }
+
+  #confirm {
+    width: 15%;
+  }
+}
+
+li > .emotion-name-container {
+  padding-top: 10px;
+  height: 74px;
+}
+
+/* Description*/
+#desc {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.7em;
+  color: #e06386;
+  letter-spacing: 2px;
+  margin-top: 6%;
+  transition: 500ms color;
+}

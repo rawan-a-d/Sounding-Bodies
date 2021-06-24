@@ -100,22 +100,41 @@ export class WantToFeelComponent implements OnInit {
 
   svg_color_global = "#e06386"
 
-  setColor(color: string){
+  setColor(color: string, emotion: Emotion){
     var svg_color = document.getElementById("svg-path-1");
     var svg_color1 = document.getElementById("svg-path-2");
-    var button_color = document.getElementById("confirm")
+    var button_color = document.getElementById("confirm");
+    var description = document.getElementById("desc");
 
-    if(this.svg_color_global != null && svg_color != null && svg_color1 != null && button_color != null){
+    if(this.svg_color_global != null && svg_color != null && svg_color1 != null && button_color != null && description != null){
       // this.isChanged = !this.isChanged;
 
       this.svg_color_global = color;
       svg_color.style.fill = color;
       button_color.style.backgroundColor = color;
       svg_color1.style.fill = color;
+      description.style.color = color;
+
+      this.markAsSelected(emotion);
     }
   }
 
   confirm(){
     this.router.navigate(['video-session']);
   }
+
+  public selectedEmotions: Emotion[] = [];
+
+  // Mark category as selected
+	markAsSelected(emotion: Emotion) {
+		// if emotion wasn't already added
+		if (this.selectedEmotions.indexOf(emotion) == -1) {
+			this.selectedEmotions.push(emotion);
+		}
+	}
+
+  // Is provided emotion selected
+	isEmotionSelected(emotion: Emotion) {
+		return this.selectedEmotions.indexOf(emotion) != -1;
+	}
 }
